@@ -3,19 +3,12 @@ import Link from "next/link";
 import classes from './movie-item.module.css';
 import Button from '../ui/button'
 
-import { iconName } from "react-icons/fa"
 import { MdLink,MdShare, MdBookmarkBorder, MdArrowForward, MdThumbUp, MdComment, MdPlayCircleOutline } from "react-icons/md";
 
 
 function MovieItem(props) {
   const { title, poster, releaseDate, genres, id, imdbRating, storyline, actors } = props;
 
-  const humanReadableDate = new Date(releaseDate).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    weekday: 'long'
-  });
 
   const exploreLink = `/movies/${id}`
 
@@ -53,6 +46,7 @@ function MovieItem(props) {
                           <a className={classes.actions_more}><MdLink /></a>
                       </div>
                 </div>
+                 <Button link={exploreLink} className={classes.details}>More Details</Button> 
             </div>
       </div>
 

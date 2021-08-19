@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
     <Head>
- <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+ <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin="true"></script>
 
 <script
   src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
